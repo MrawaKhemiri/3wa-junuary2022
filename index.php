@@ -42,9 +42,15 @@ git branch_a --d
 //initialiser un project 
 git init
 
+git add .
 // créer et modifier un fichier 
 git commit -m "create index.html file"
+
+git status : voir les modif 
+
 git commit -m "update index.html file"
+
+git status : voir les modif 
 
 // lister les modifications sur les fichiers 
 git log
