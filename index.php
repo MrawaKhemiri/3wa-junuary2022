@@ -40,9 +40,14 @@ git merge branche_a
 git branch_a --d
 
 //initialiser un project 
-
 git init
 
+// créer et modifier un fichier 
+git commit -m "create index.html file"
+git commit -m "update index.html file"
+
+// lister les modifications sur les fichiers 
+git log
 
 
 
