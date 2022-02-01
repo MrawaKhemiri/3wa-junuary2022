@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CDN Vue js -->
+    <script src="https://unpkg.com/vue@3.2.29"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1>Server Status</h1>
+        <p v-if="isActive">Server is up</p>
+        <p v-else>Server is Down</p>
+        <p v-show="isActive">Acces Server is up</p>
+        <template v-if="isActive">
+             <h2>section1</h2>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus dignissimos expedita totam rem reprehenderit nostrum odit facere accusamus explicabo est minima dolorum quod ducimus nulla, cupiditate at sapiente. Laborum, cum.</p>
+        </template>
+        <template v-else>
+            <h2>section2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus dignissimos expedita totam rem reprehenderit nostrum odit facere accusamus explicabo est minima dolorum quod ducimus nulla, cupiditate at sapiente. Laborum, cum.</p>
+        </template>
+    </div>
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    isActive: false,
+                    text: 'lorem ipsum lorem ipsum lorem ipsum'
+                }
+            }
+        }).mount('#app');
+    </script>
+    <!-- mount fais la lisaison entre js et html , v-show est interprété par le Dom par contre le v-if non-->
+</body>
+
+</html>

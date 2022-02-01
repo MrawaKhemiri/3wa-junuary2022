@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CDN Vue js -->
+    <script src="https://unpkg.com/vue@3.2.29"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{ message }}</h1>
+        <p>Visit Vue.js official website:<a v-bind:href="url">here</a></p>
+        <!-- v-bind pour lier toute propeiété html -->
+    </div>
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    message: 'hello Vus js',
+                    url: 'https://github.com/'
+                }
+            }
+        }).mount('#app');
+    </script>
+    <!-- mount fais la lisaison entre js et html  -->
+</body>
+
+</html>
